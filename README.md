@@ -1,1 +1,1 @@
-# openbox-pkgbuilds
+# obx-pkgbuilds

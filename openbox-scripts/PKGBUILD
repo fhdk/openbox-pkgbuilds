@@ -1,0 +1,30 @@
+# Maintainer: fhdk <echo -n ZmhAbWFuamFyby5vcmc= | base64 -d>
+pkgname=manjaro-openbox-scripts
+pkgver=1.0
+pkgrel=1
+pkgdesc="Manjaro Openbox scripts"
+arch=('any')
+url="https://github.com/fhdk/openbox-scripts.git"
+license=('GPL3')
+depends=('openbox')
+provides=("manjaro-openbox-scripts")
+source=(git+$url)
+makedepends=('git')
+md5sums=('SKIP')
+install="openbox-scripts.install"
+_destdir="manjaro-openbox"
+
+package() {
+	_sharedir=${pkgdir}/usr/share
+	_libdir=${pkgdir}/usr/lib/${_destdir}
+	
+	cd ${srcdir}
+	
+	install -dm755 ${_libdir}
+	cp -r ${_srcdir}/common   ${_libdir}
+	cp -r ${_srcdir}/scripts  ${_libdir}
+	
+	install -dm755 ${_sharedir}
+	cp -r ${_srcdir}/doc      ${_sharedir}
+	cp -r ${_srcdir}/licenses ${_sharedir}
+}
