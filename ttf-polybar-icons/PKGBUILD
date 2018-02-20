@@ -1,0 +1,20 @@
+# Maintainer: fhdk <fh@manjaro.org>
+
+pkgname=ttf-polybar-icons
+pkgver=1.0
+pkgrel=1
+pkgdesc="TrueType polybar icons"
+arch=('any')
+license=('MIT')
+depends=('fontconfig' 'xorg-fonts-encodings' 'xorg-font-utils')
+makedepends=('git')
+source=('git+https://github.com/fhdk/ttf-polybar-icons.git')
+install=$pkgname.install
+sha256sums=('SKIP')
+
+package() {
+	cd $srcdir/$pkgname
+	install -d $pkgdir/usr/share/fonts/TTF/
+	install -m644 polybar-icons.ttf $pkgdir/usr/share/fonts/TTF/polybar-icons.ttf
+}
+

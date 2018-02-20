@@ -1,0 +1,21 @@
+# Maintainer: fhdk <fh@manjaro.org>
+
+pkgname=ttf-icomoon-icons
+pkgver=1.0
+pkgrel=1
+pkgdesc="TrueType icomoon font"
+url="https://icomoon.io"
+arch=('any')
+license=('MIT')
+depends=('fontconfig' 'xorg-fonts-encodings' 'xorg-font-utils')
+makedepends=('git')
+source=("git+https://github.com/fhdk/ttf-icomoon-icons.git")
+sha256sums=('SKIP')
+install=$pkgname.install
+
+package() {
+	cd $srcdir/$pkgname
+	install -d $pkgdir/usr/share/fonts/TTF/
+	install -m644 icomoon-icons.ttf $pkgdir/usr/share/fonts/TTF/icomoon-icons.ttf
+}
+
