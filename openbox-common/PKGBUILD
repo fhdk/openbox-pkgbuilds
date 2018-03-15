@@ -2,7 +2,7 @@
 
 pkgname=manjaro-openbox-common
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Common files needed by Manjaro Openbox"
 arch=('any')
 url="https://github.com/fhdk/openbox-common.git"
@@ -13,7 +13,6 @@ conflicts=('manjaro-openbox-scripts' 'openbox-scripts')
 source=(git+$url)
 makedepends=('git')
 md5sums=('SKIP')
-install=$pkgname.install
 
 _install_dir=openbox-common
 
@@ -25,7 +24,6 @@ package() {
 	
 	install -dm755 ${_libdir}
 	cp -r common   ${_libdir}
-	#cp -r scripts  ${_libdir}
 	
 	install -dm755 ${_sharedir}
 	cp -r doc      ${_sharedir}
