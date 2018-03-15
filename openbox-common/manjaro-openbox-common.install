@@ -1,3 +1,0 @@
-post_install() {
-	cp --symbolic-link /usr/lib/manjaro/scripts/* /usr/bin --force
-}
