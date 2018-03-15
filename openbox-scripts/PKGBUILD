@@ -1,25 +1,27 @@
 # Maintainer: fhdk <fh@manjaro.org>
 
-pkgname=openbox-scripts
+pkgname=manjaro-openbox-scripts
 pkgver=1.0
 pkgrel=1
 pkgdesc="A collection of Openbox scripts and pipemenus"
 arch=('any')
 url="https://github.com/fhdk/openbox-scripts.git"
 license=('GPL3')
-depends=()
 makedepends=('git')
-provides=('openbox-scripts')
+provides=('manjaro-openbox-scripts')
+conflicts=('openbox-scripts')
 source=(git+$url)
 makedepends=('git')
 md5sums=('SKIP')
 install=$pkgname.install
 
+_install_dir=openbox-scripts
+
 package() {
         _sharedir=${pkgdir}/usr/share
         _libdir=${pkgdir}/usr/lib/manjaro
 	
-	cd ${srcdir}/openbox-scripts
+	cd ${srcdir}/$_install_dir
 	
 	install -dm755 ${_libdir}
 	cp -r common   ${_libdir}
