@@ -5,11 +5,12 @@ pkgver=1
 pkgrel=3
 pkgdesc="A simple autostart application for Openbox"
 arch=('any')
-url="http://crunchbanglinux.org/forums/topic/2614/"
+url="https://github.com/fhdk/ob-autostart"
 license=('GPL2')
 depends=('python'  'pygtk')
+makedepends('git')
 #optdepends=('python-notify')
-source=('ob-autostart') #from http://www.ad-comp.be/public/projets/ob-autostart/ob-autostart
+source=('git+https://github.com/fhdk/$pkgname.git')
 md5sums=('7e19c8d8c02f296e7235e2dbe31b7b00')
 
 package() {
