@@ -1,4 +1,5 @@
-# Maintainer: Steven Honeyman <stevenhoneyman at gmail com>
+# Maintainer: fhdk <fh at manjaro org>
+# Contributor: Steven Honeyman <stevenhoneyman at gmail com>
  
 pkgname=obkey-gtk3
 pkgver=1.0.47.gcf99076

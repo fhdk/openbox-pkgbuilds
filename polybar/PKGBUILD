@@ -1,5 +1,4 @@
-# Maintainer: fhdk <fh@manjaro.org>
-# Contributor: Michael Carlberg <c@rlberg.se>
+# Maintainer: fhdk <fh at manjaro org>
 # Contributor: Michael Carlberg <c@rlberg.se>
 pkgname=polybar
 pkgver=3.1.0

@@ -1,0 +1,22 @@
+# Maintainer: fhdk <fh at manjaro org>
+
+pkgname=manjaro-openbox-walls
+pkgver=1.0
+pkgrel=1
+pkgdesc="Manjaro Openbox Wallpapers"
+arch=('any')
+license=('MIT')
+makedepends=('git')
+source=('git+https://github.com/fhdk/openbox-walls.git')
+md5sums=('SKIP')
+
+_install_from=openbox-walls/img
+
+package() {
+    cd $srcdir/$_install_from
+    install -d $pkgdir/usr/share/backgrounds
+    install -m644 * $pkgdir/usr/share/backgrounds
+    install -d $pkgdir/usr/share/grub
+    install -m644 openbox-wall-slizes.png $pkgdir/usr/share/grub/background.png
+}
+
