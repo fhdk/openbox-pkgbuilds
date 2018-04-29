@@ -1,0 +1,26 @@
+# Maintainer: fhdk <fh at manjaro org>
+
+_gitname=dev-openbox-fonts
+pkgname=dev-openbox-fonts
+pkgver=1.2
+pkgrel=1
+pkgdesc="Fonts for Openbox Theming"
+arch=('any')
+license=('MIT')
+depends=('fontconfig' 'xorg-fonts-encodings' 'xorg-font-utils')
+makedepends=('git')
+source=('git+https://github.com/fhdk/openbox-fonts.git')
+sha256sums=('SKIP')
+provides=('dev-openbox-fonts')
+conflicts=('manjaro-openbox-fonts')
+install=openbox-fonts.install
+_install_from=dev-openbox-fonts
+
+package() {
+    cd $srcdir/$_gitname
+    install -d $pkgdir/usr/share/fonts/TTF/
+    install -d $pkgdir/usr/share/fonts/OTF/
+    install -m644 TTF/* $pkgdir/usr/share/fonts/TTF/
+    install -m644 OTF/* $pkgdir/usr/share/fonts/OTF/
+}
+
