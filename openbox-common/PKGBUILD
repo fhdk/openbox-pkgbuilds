@@ -1,19 +1,28 @@
 # Maintainer: fhdk <fh at manjaro org>
 
-pkgname="dev-openbox-common"
-_gitname="dev-openbox-common"
-pkgver=1.2.3
+pkgname="openbox-common-dev"
+_gitname="openbox-common"
+_branch="master"
+pkgver=20180430
 pkgrel=1
-pkgdesc="Development Openbox common scripts and settings"
+pkgdesc="Manjaro Openbox common scripts and settings"
 arch=('any')
-url="https://github.com/fhdk/${_gitname}.git"
+url="https://github.com/fhdk/${_gitname}"
 license=('GPL3')
 makedepends=('git')
-provides=('dev-openbox-common')
-conflicts('manjaro-openbox-common')
-source=(git+$url)
+provides=('manjaro-openbox-common-dev')
+conflicts=('manjaro-openbox-common')
+source=(git+$url.git#branch=${_branch})
 makedepends=('git')
-md5sums=('SKIP')
+sha256sums=('SKIP')
+
+pkgver() {
+    date +%Y%m%d
+}
+
+pkgrel() {
+	${pkgrel}+1
+}
 
 package() {
 	install -dm755   ${pkgdir}/usr/lib/manjaro

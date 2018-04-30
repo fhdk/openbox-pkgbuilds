@@ -1,9 +1,9 @@
 # Maintainer: fhdk <fh at manjaro org>
 
-pkgname="openbox-dev-base"
+pkgname="manjaro-openbox-base"
 pkgver=1.2.2
 pkgrel=1
-pkgdesc="Development Openbox base"
+pkgdesc="Manjaro Openbox base"
 arch=('any')
 license=('GPL3')
 depends=('adwaita-icon-theme'
@@ -102,5 +102,4 @@ depends=('adwaita-icon-theme'
          'xdotool'
          'zenity'
          )
-provides=('dev-openbox-base')
-conflicts=('manjaro-openbox-base')
+provides=('manjaro-openbox-base')
