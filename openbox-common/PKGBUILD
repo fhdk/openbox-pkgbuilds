@@ -5,12 +5,12 @@ _gitname="openbox-common"
 _branch="master"
 pkgver=20180430
 pkgrel=1
-pkgdesc="Manjaro Openbox common scripts and settings"
+pkgdesc="Openbox common development (scripts and setttings)"
 arch=('any')
 url="https://github.com/fhdk/${_gitname}"
 license=('GPL3')
 makedepends=('git')
-provides=('manjaro-openbox-common-dev')
+provides=('openbox-common-dev')
 conflicts=('manjaro-openbox-common')
 source=(git+$url.git#branch=${_branch})
 makedepends=('git')
@@ -18,10 +18,6 @@ sha256sums=('SKIP')
 
 pkgver() {
     date +%Y%m%d
-}
-
-pkgrel() {
-	${pkgrel}+1
 }
 
 package() {

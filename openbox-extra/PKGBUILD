@@ -1,11 +1,17 @@
 # Maintainer: fhdk <fh at manjaro org>
 
-pkgname="manjaro-openbox-extra"
+pkgname="openbox-extra-dev"
 pkgver=1.2.2
 pkgrel=1
-pkgdesc="Manjaro Openbox extra"
+pkgdesc="Openbox extra development"
 arch=('any')
 license=('GPL3')
+provides=('openbox-extra-dev')
+conflicts=('manjaro-openbox-extra')
+pkgver() {
+    date +%Y%m%d
+}
+
 depends=('android-file-transfer'
          'android-tools'
          'android-udev'
@@ -23,4 +29,3 @@ depends=('android-file-transfer'
          'pavucontrol'
          'playerctl'
          )
-provides=('manjaro-openbox-extra')

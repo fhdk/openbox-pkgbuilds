@@ -1,13 +1,12 @@
 # Maintainer: fhdk <fh at manjaro org>
 
-pkgname="openbox-base-dev"
+pkgname="openbox-minimal-dev"
 pkgver=1.2.2
 pkgrel=1
-pkgdesc="Openbox base development"
+pkgdesc="Openbox minimal development"
 arch=('any')
 license=('GPL3')
-provides=('openbox-base-dev')
-conflicts=('manjaro-openbox-base')
+provides=('openbox-minimal-dev')
 
 pkgver() {
     date +%Y%m%d
