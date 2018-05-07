@@ -8,10 +8,10 @@ arch=('any')
 url="https://github.com/fhdk/ob-autostart"
 license=('GPL2')
 depends=('python'  'pygtk')
-makedepends('git')
+makedepends=('git')
 #optdepends=('python-notify')
-source=('git+https://github.com/fhdk/$pkgname.git')
-md5sums=('7e19c8d8c02f296e7235e2dbe31b7b00')
+source=("git+https://github.com/fhdk/$pkgname.git")
+md5sums=('SKIP')
 
 package() {
   install -D -m755 "${srcdir}/ob-autostart" "${pkgdir}/usr/bin/ob-autostart"
