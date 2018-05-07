@@ -7,13 +7,17 @@ pkgdesc="Manjaro Openbox Core Packages"
 arch=('any')
 license=('MIT')
 provides=('manjaro-openbox-core')
-optdepends=('manjaro-base-skel'
-            'manjaro-openbox-extra'
+optdepends=('manjaro-openbox-extra'
             'manjaro-openbox-extra-skel'
             'manjaro-openbox-minimal'
-            )
+            'manjaro-openbox-minimal-skel')
 depends=(
-   'manjaro-openbox-minimal-skel'
+   'manjaro-openbox-common'
+   'manjaro-openbox-grub-theme'
+   'manjaro-openbox-scripts'
+   'manjaro-openbox-theming-fonts'
+   'manjaro-openbox-theming-icons'
+   'manjaro-openbox-theming-theme'
    'arandr'
    'compton'
    'conky'

@@ -6,9 +6,10 @@ pkgrel=1
 pkgdesc="Manjaro Openbox Extra Packages"
 arch=('any')
 license=('MIT')
-optdepends=('manjaro-openbox-extra-skel')
 provides=('manjaro-openbox-extra')
+optdepends=('manjaro-openbox-extra-skel')
 depends=(
+   'manjaro-openbox-core'
    'android-file-transfer'
    'android-tools'
    'android-udev'
@@ -51,7 +52,6 @@ depends=(
    'net-tools'
    'nmap'
    'ntp'
-   'manjaro-pulse'
    'mlocate'
    'mpv'
    'p7zip'

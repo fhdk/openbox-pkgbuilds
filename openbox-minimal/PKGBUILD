@@ -7,7 +7,9 @@ pkgdesc="Manjaro Openbox Minimal Packages"
 arch=('any')
 license=('MIT')
 provides=('manjaro-openbox-minimal')
+optdepends=('manjaro-openbox-minimal-skel')
 depends=(
+    'manjaro-openbox-core'
     'abiword'
     'bind-tools'
     'claws'
