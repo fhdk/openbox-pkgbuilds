@@ -1,0 +1,5 @@
+post_install() {
+    echo ":: To make use of these Openbox settings copy the content"
+    echo ":: of /etc/skel including hidden folders and files to your home folder"
+    echo ":: `cp -r /etc/skel/* /home/$USER`"
+}

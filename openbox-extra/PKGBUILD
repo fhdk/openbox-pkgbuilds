@@ -1,31 +1,89 @@
 # Maintainer: fhdk <fh at manjaro org>
 
-pkgname="openbox-extra-dev"
-pkgver=1.2.2
+pkgname="manjaro-openbox-extra"
+pkgver=1.3.0.2
 pkgrel=1
-pkgdesc="Openbox extra development"
+pkgdesc="Manjaro Openbox Extra Packages"
 arch=('any')
-license=('GPL3')
-provides=('openbox-extra-dev')
-conflicts=('manjaro-openbox-extra')
-pkgver() {
-    date +%Y%m%d
-}
-
-depends=('android-file-transfer'
-         'android-tools'
-         'android-udev'
-         'audacious-gtk3'
-         'audacious-plugins-gtk3'
-         'blueman'
-         'gparted'
-         'guake'
-         'gvfs'
-         'gvfs-afc'
-         'gvfs-mtp'
-         'gvfs-smb'
-         'mpv'
-         'pamixer'
-         'pavucontrol'
-         'playerctl'
-         )
+license=('MIT')
+optdepends=('manjaro-openbox-extra-skel')
+provides=('manjaro-openbox-extra')
+depends=(
+   'android-file-transfer'
+   'android-tools'
+   'android-udev'
+   'audacious-gtk3'
+   'audacious-plugins-gtk3'
+   'avahi'
+   'bind-tools'
+   'blueman'
+   'catfish'
+   'chromium'
+   'claws'
+   'clonezilla'
+   'exo-gtk3'
+   'ffmpegthumbnailer'
+   'file-roller'
+   'freetype2'
+   'fsarchiver'
+   'galculator'
+   'gcolor2'
+   'gparted'
+   'gpicview-gtk3'
+   'gsimplecal'
+   'guake'
+   'gufw'
+   'gvfs'
+   'gvfs-afc'
+   'gvfs-mtp'
+   'gvfs-smb'
+   'htop'
+   'inxi'
+   'libgsf'
+   'libopenraw'
+   'libreoffice-fresh'
+   'lxappearance-gtk3'
+   'lxappearance-obconf-gtk3'
+   'lxsession-gtk3'
+   'lynx'
+   'mc'
+   'networkmanager'
+   'net-tools'
+   'nmap'
+   'ntp'
+   'manjaro-pulse'
+   'mlocate'
+   'mpv'
+   'p7zip'
+   'pacui'
+   'pamac'
+   'pamixer'
+   'pavucontrol'
+   'playerctl'
+   'openssh'
+   'pamac'
+   'poppler-data'
+   'poppler-glib'
+   'ps_mem'
+   'qpdfview'
+   'ranger'
+   'screenfetch'
+   'smbclient'
+   'sublime-text-dev'
+   'testdisk'
+   'thunar-gtk3'
+   'thunar-archive-plugin-gtk3'
+   'thunar-media-tags-plugin'
+   'thunar-volman-gtk3'
+   'tumbler'
+   'ufw'
+   'unace'
+   'unrar'
+   'usb_modeswitch'
+   'vlc-nightly'
+   'volumeicon'
+   'wicd-gtk'
+   'wicd-patched'
+   'xfburn'
+   'xfce4-settings-gtk3'
+)

@@ -1,0 +1,47 @@
+pkgbase=openbox-theming
+pkgname=('manjaro-openbox-theming-fonts'
+         'manjaro-openbox-theming-icons'
+         'manjaro-openbox-theming-theme'
+         )
+pkgver=1.3.0.2
+pkgrel=1
+arch=('any')
+licence=('MIT')
+
+package_manjaro-openbox-theming-fonts() {
+    pkgdesc='Manjaro Openbox Font Theming'
+    depends=('manjaro-openbox-fonts'
+	         'ttf-dejavu'
+	         'ttf-droid'
+	         'ttf-font-awesome'
+	         'ttf-font-logos'
+	         'ttf-icomoon-icons'
+	         'ttf-material-icons'
+	         'ttf-polybar-icons'
+	         'ttf-roboto'
+	         )
+	provides=('manjaro-openbox-theming-font')
+}
+
+package_manjaro-openbox-theming-icons() {
+	pkgdesc='Manjaro Openbox Icon Theming'
+	depends=('adwaita-icon-theme'
+         	 'gnome-icon-theme'
+             'gnome-icon-theme-extras'
+             'gnome-icon-theme-symbolic'
+             'gnome-themes-extra'
+             'gtk-theme-breath'
+             'hicolor-icon-theme'
+             'vibrancy-colors'
+             'xcursor-breeze'
+            )
+    provides=('manjaro-openbox-theming-icons')
+}
+
+package_manjaro-openbox-theming-theme() {
+	pkgdesc='Manjaro Openbox Theme'
+	depends=('gtk-theme-breath'
+             'openbox-themes'
+             )
+    provides=('manjaro-openbox-theming-theme')
+}

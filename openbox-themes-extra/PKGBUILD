@@ -1,0 +1,19 @@
+# Maintainer: fhdk <fh at manjaro org>
+
+pkgname=openbox-themes-extra
+pkgver=1.0
+pkgrel=3
+pkgdesc="Openbox Themes by Cybercop <echo Y3liZXJjb3BfbW9udGFuYUBhYnYuYmc= | base64 -d>"
+arch=('any')
+license=('MIT')
+makedepends=('git')
+source=('git+https://github.com/fhdk/openbox-themes-extra.git')
+sha256sums=('SKIP')
+
+package() {
+    cd $srcdir/$pkgname
+    install -d $pkgdir/usr/share/themes
+  	#install themes $pkgdir/usr/share/themes
+    cp -r themes $pkgdir/usr/share
+}
+
