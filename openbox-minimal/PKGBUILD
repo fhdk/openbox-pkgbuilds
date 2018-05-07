@@ -1,7 +1,7 @@
 # Maintainer: fhdk <fh at manjaro org>
 
 pkgname="manjaro-openbox-minimal"
-pkgver=1.3.0.2
+pkgver=1.3.0.4
 pkgrel=1
 pkgdesc="Manjaro Openbox Minimal Packages"
 arch=('any')
@@ -39,7 +39,7 @@ depends=(
     'ps_mem'
     'ranger'
     'pcmanfm-gtk3'
-    'qpdf'
+    'qpdfview'
     'screenfetch'
     'smbclient'
     'sublime-text-dev'
