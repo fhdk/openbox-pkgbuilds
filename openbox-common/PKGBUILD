@@ -3,7 +3,7 @@
 pkgname="manjaro-openbox-common"
 _gitname="openbox-common"
 _branch="master"
-pkgver=1.3.0.4
+pkgver=1.3.0.6
 pkgrel=1
 pkgdesc="Manjaro Openbox Common Files"
 arch=('any')
@@ -18,10 +18,10 @@ sha256sums=('SKIP')
 package() {
 	install -dm755   ${pkgdir}/usr/share
 	install -dm755   ${pkgdir}/usr/lib/manjaro
-	install -dm755   ${pkgdir}/usr/share/manjaro-openbox
+	install -dm755   ${pkgdir}/usr/share/manjaro
 	cd ${srcdir}/$_gitname
 	cp -r common     ${pkgdir}/usr/lib/manjaro
-	cp -r doc        ${pkgdir}/usr/share
-	cp -r licenses   ${pkgdir}/usr/share
-	cp -r icons      ${pkgdir}/usr/share/manjaro-openbox
+	cp -r doc        ${pkgdir}/usr/share/manjaro
+	cp -r licenses   ${pkgdir}/usr/share/manjaro
+	cp -r icons      ${pkgdir}/usr/share/manjaro
 }
