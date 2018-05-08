@@ -1,5 +1,3 @@
-# Maintainer: fhdk <fh at manjaro org>
-# Contributor: Michael Carlberg <c@rlberg.se>
 pkgname=polybar
 pkgver=3.1.0
 pkgrel=4
@@ -8,27 +6,22 @@ arch=("i686" "x86_64")
 url="https://github.com/jaagr/polybar"
 license=("MIT")
 depends=("cairo" "xcb-util-image" "xcb-util-wm" "xcb-util-xrm" "xcb-util-cursor")
-optdepends=("alsa-lib"
-            "curl"
-            "i3-wm"
-            "jsoncpp"
-            "libmpdclient"
-            "siji-git: Font used in example config"
+optdepends=("alsa-lib: alsa module support"
+            "libmpdclient: mpd module support"
+            "wireless_tools: network module support"
+            "jsoncpp: i3 module support"
+            "i3-wm: i3 module support"
             "ttf-unifont: Font used in example config"
-            "wireless_tools"
-            )
-makedepends=("cmake" "git" "python" "python2" "pkg-config"
-            "alsa-lib" "curl" "i3-wm" "jsoncpp" "libmpdclient" "wireless_tools"
-            )
+            "siji-git: Font used in example config"
+            "curl: github module support")
+makedepends=("cmake" "git" "python" "python2" "pkg-config")
 conflicts=("polybar-git")
 install="${pkgname}.install"
 source=("${pkgname}::git+${url}.git#tag=${pkgver}")
 md5sums=("SKIP")
 
-pgkrel() {
-    $pkgrel=$pkgrel + 1
-}
 prepare() {
+  git -C "${pkgname}" cherry-pick -n 8173a6473e50a3bb0ff15e56644fa45268be84a4
   git -C "${pkgname}" submodule update --init --recursive
   git -C "${pkgname}/lib/xpp" checkout 00165e1a6d5dd61bc153e1352b21ec07fc81245d
   mkdir -p "${pkgname}/build"
