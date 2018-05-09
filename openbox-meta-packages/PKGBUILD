@@ -17,7 +17,7 @@ package_manjaro-openbox-core() {
     depends=(
         'manjaro-openbox-common' 'manjaro-openbox-grub-theme' 'manjaro-openbox-scripts'
         'manjaro-openbox-theming-fonts' 'manjaro-openbox-theming-icons' 'manjaro-openbox-theming-theme'
-        'manjaro-zsh-config' 'manjaro-guake-settings'
+        'manjaro-zsh-config' 'manjaro-guake-config'
         'arandr'
         'compton' 'conky'
         'dunst'
