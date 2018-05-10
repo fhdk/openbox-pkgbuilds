@@ -2,7 +2,7 @@
 
 pkgbase=openbox-meta-packages
 pkgname=('manjaro-openbox-core' 'manjaro-openbox-extra' 'manjaro-openbox-minimal')
-pkgver=1.3.1.0
+pkgver=1.3.1.2
 pkgrel=1
 arch=('any')
 license=('MIT')
@@ -57,11 +57,11 @@ package_manjaro-openbox-minimal() {
         'lynx' 'lxappearance-gtk3' 'lxappearance-obconf-gtk3'
         'mc' 'mintstick'
         'net-tools' 'networkmanager' 'nmap'
-        'p7zip' 'pacui' 'pcmanfm-gtk3' 'ps_mem'
+        'p7zip' 'pacui' 'ps_mem'
         'ranger'
         'qpdfview'
         'screenfetch' 'smbclient' 'sublime-text-dev'
-        'testdisk'
+        'testdisk' 'thunar-gtk3'
         'wicd-gtk' 'wicd-patched'
         'xarchiver'
     )
@@ -82,17 +82,18 @@ package_manjaro-openbox-extra() {
        'htop'
        'inxi'
        'libgsf' 'libopenraw' 'libreoffice-fresh' 'lxappearance-gtk3' 'lxappearance-obconf-gtk3' 'lynx'
-       'mc' 'mintstick'
+       'manjaro-pulse' 'mc' 'mintstick'
        'networkmanager' 'net-tools' 'nmap' 'ntp'
-       'mlocate' 'mpv'
-       'p7zip' 'pacui' 'pamac' 'pamixer' 'pavucontrol' 'playerctl'
+       'mlocate' 'mpv' 'mtpfs'
+       'p7zip' 'pacui' 'pamac' 'pamixer' 'pavucontrol' 'playerctl' 'pulseaudio-bluetooth'
+       'pulseaudio-ctl' 'pulseaudio-zeroconf'
        'openssh'
        'pamac' 'poppler-data' 'poppler-glib' 'ps_mem'
        'qpdfview'
        'ranger'
        'screenfetch' 'smbclient' 'sublime-text-dev'
        'testdisk' 'thunar-gtk3' 'thunar-archive-plugin-gtk3' 'thunar-media-tags-plugin' 'thunar-volman-gtk3' 'tumbler'
-       'ufw' 'unace' 'unrar' 'usb_modeswitch'
+       'udiskie' 'udisks2' 'ufw' 'unace' 'unrar' 'usb_modeswitch'
        'vlc-nightly' 'volumeicon'
        'wicd-gtk' 'wicd-patched'
        'xfburn' 'xfce4-settings-gtk3'
