@@ -1,0 +1,53 @@
+# Maintainer: fhdk <fh at manjaro org>
+
+pkgbase=openbox-skel
+pkgname=('manjaro-openbox-minimal-skel'
+         'manjaro-openbox-extra-skel'
+         )
+pkgver=1.3.2
+pkgrel=1
+arch=('any')
+url="https://github.com/fhdk/openbox-skel"
+license=('MIT')
+makedepends=('git')
+source=("git+$url.git")
+sha256sums=('SKIP')
+install=openbox-skel.install
+
+_inst_dir(){
+    if [[ -d $srcdir/$pkgbase/$1/skel ]]; then
+        install -d $pkgdir/etc
+        cp -r $srcdir/$pkgbase/$1/skel $pkgdir/etc
+    fi
+
+    if [[ -d $srcdir/$pkgbase/$1/scripts ]]; then
+        install -d $pkgdir/usr/bin
+        cp $srcdir/$pkgbase/$1/scripts/* $pkgdir/usr/bin
+    fi
+
+    if [[ -d $srcdir/$pkgbase/$1/schemas ]]; then
+        install -d $pkgdir/usr/share/glib-2.0/schemas
+        cp $srcdir/$pkgbase/$1/schemas/* $pkgdir/usr/share/glib-2.0/schemas
+    fi
+
+    if [[ -d $srcdir/$pkgbase/$1/dconf ]]; then
+        install -d $pkgdir/etc/dconf
+        cp -r $srcdir/$pkgbase/$1/dconf/* $pkgdir/etc/dconf
+    fi
+}
+
+package_manjaro-openbox-minimal-skel() {
+    pkgdesc='Manjaro Linux Openbox Minimal Skel'
+    conflicts=('manjaro-openbox-skel')
+    provides=('manjaro-openbox-skel')
+
+    _inst_dir 'minimal'
+}
+
+package_manjaro-openbox-extra-skel() {
+    pkgdesc='Manjaro Linux Openbox Extra Skel'
+    conflicts=('manjaro-openbox-skel')
+    provides=('manjaro-openbox-skel')
+
+    _inst_dir 'extra'
+}

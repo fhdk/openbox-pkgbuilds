@@ -1,0 +1,17 @@
+diff -rupN a/data/x.dm.slick-greeter.gschema.xml b/data/x.dm.slick-greeter.gschema.xml
+--- a/data/x.dm.slick-greeter.gschema.xml	2017-11-03 22:30:18.000000000 +0100
++++ b/data/x.dm.slick-greeter.gschema.xml	2018-05-07 00:07:19.261276148 +0200
+@@ -10,11 +10,11 @@
+       <summary>Background color (e.g. #772953), set before wallpaper is seen</summary>
+     </key>
+     <key name="draw-user-backgrounds" type="b">
+-      <default>true</default>
++      <default>false</default>
+       <summary>Whether to draw user backgrounds</summary>
+     </key>
+     <key name="draw-grid" type="b">
+-      <default>true</default>
++      <default>false</default>
+       <summary>Whether to draw an overlay grid</summary>
+     </key>
+     <key name="show-hostname" type="b">
