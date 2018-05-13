@@ -4,7 +4,7 @@ pkgbase=openbox-skel
 pkgname=('manjaro-openbox-minimal-skel-dev'
          'manjaro-openbox-extra-skel-dev'
          )
-pkgver=1.3.2.1
+pkgver=1.3.2.4
 pkgrel=1
 _branch=master
 arch=('any')
@@ -39,7 +39,7 @@ _inst_dir(){
 
 package_manjaro-openbox-minimal-skel-dev() {
     pkgdesc='Manjaro Linux Openbox Minimal Skel'
-    conflicts=('manjaro-openbox-skel''manjaro-openbox-skel-dev')
+    conflicts=('manjaro-openbox-skel' 'manjaro-openbox-skel-dev')
     provides=('manjaro-openbox-skel-dev')
 
     _inst_dir 'minimal'
