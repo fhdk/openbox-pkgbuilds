@@ -3,7 +3,7 @@
 pkgname="manjaro-openbox-scripts-dev"
 _gitname="openbox-scripts"
 _branch="master"
-pkgver=1.3.1.1
+pkgver=1.3.2.1
 pkgrel=1
 pkgdesc="Manjaro Openbox Scripts"
 arch=('any')
