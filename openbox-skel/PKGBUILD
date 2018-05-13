@@ -14,6 +14,7 @@ makedepends=('git')
 source=("git+$url.git#branch=${_branch}")
 sha256sums=('SKIP')
 install=openbox-skel.install
+backup=('etc/dconf/profile/user' 'etc/dconf/db/user.d/00-gedit-settings')
 
 _inst_dir(){
     if [[ -d $srcdir/$pkgbase/$1/skel ]]; then
@@ -33,7 +34,9 @@ _inst_dir(){
 
     if [[ -d $srcdir/$pkgbase/$1/dconf ]]; then
         install -d $pkgdir/etc/dconf/db/user.d
-        cp -r $srcdir/$pkgbase/$1/dconf/* $pkgdir/etc/dconf/db/user.d
+        cp -r $srcdir/$pkgbase/$1/dconf/db/* $pkgdir/etc/dconf/db/user.d
+        install -d $pkgdir/etc/dconf/profile
+        cp $srcdir/$pkgbase/$1/dconf/profile/user $pkgdir/etc/dconf/profile/
     fi
 }
 
