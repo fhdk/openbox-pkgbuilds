@@ -4,13 +4,14 @@ pkgbase=openbox-skel
 pkgname=('manjaro-openbox-minimal-skel'
          'manjaro-openbox-extra-skel'
          )
-pkgver=1.3.1.4
-pkgrel=2
+pkgver=1.3.2
+pkgrel=1
+_branch=stable18
 arch=('any')
 url="https://github.com/fhdk/openbox-skel"
 license=('MIT')
 makedepends=('git')
-source=("git+$url.git")
+source=("git+$url.git#branch=${_branch}")
 sha256sums=('SKIP')
 install=openbox-skel.install
 
@@ -31,14 +32,14 @@ _inst_dir(){
     fi
 
     if [[ -d $srcdir/$pkgbase/$1/dconf ]]; then
-        install -d $pkgdir/etc/dconf
-        cp -r $srcdir/$pkgbase/$1/dconf/* $pkgdir/etc/dconf
+        install -d $pkgdir/etc/dconf/db/user.d
+        cp -r $srcdir/$pkgbase/$1/dconf/* $pkgdir/etc/dconf/db/user.d
     fi
 }
 
 package_manjaro-openbox-minimal-skel() {
     pkgdesc='Manjaro Linux Openbox Minimal Skel'
-    conflicts=('manjaro-openbox-skel')
+    conflicts=('manjaro-openbox-skel' 'manjaro-openbox-skel-dev')
     provides=('manjaro-openbox-skel')
 
     _inst_dir 'minimal'
@@ -46,7 +47,7 @@ package_manjaro-openbox-minimal-skel() {
 
 package_manjaro-openbox-extra-skel() {
     pkgdesc='Manjaro Linux Openbox Extra Skel'
-    conflicts=('manjaro-openbox-skel')
+    conflicts=('manjaro-openbox-skel' 'manjaro-openbox-skel-dev')
     provides=('manjaro-openbox-skel')
 
     _inst_dir 'extra'

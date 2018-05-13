@@ -9,7 +9,7 @@ pkgdesc="Slick grub theme for Manjaro Openbox"
 arch=('any')
 license=('MIT')
 makedepends=('git')
-source=("git+https://github.com/fhdk/openbox-grub-theme.git#branch=${_branch}"")
+source=("git+https://github.com/fhdk/openbox-grub-theme.git#branch=${_branch}")
 install=openbox-grub-theme.install
 sha256sums=('SKIP')
 
