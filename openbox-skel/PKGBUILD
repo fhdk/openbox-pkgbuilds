@@ -1,10 +1,11 @@
 # Maintainer: fhdk <fh at manjaro org>
 
 pkgbase=openbox-skel
-pkgname=('manjaro-openbox-minimal-skel'
-         'manjaro-openbox-extra-skel'
-         )
-pkgver=1.3.3
+pkgname=(
+    'manjaro-openbox-minimal-skel'
+    'manjaro-openbox-extra-skel'
+    )
+pkgver=1.3.5
 pkgrel=1
 _branch=v18
 arch=('any')
@@ -34,14 +35,14 @@ _inst_dir(){
 
     if [[ -d $srcdir/$pkgbase/$1/dconf ]]; then
         install -d $pkgdir/etc/dconf/db/user.d
-        cp -r $srcdir/$pkgbase/$1/dconf/db/* $pkgdir/etc/dconf/db/user.d
+        install $srcdir/$pkgbase/$1/dconf/db/* $pkgdir/etc/dconf/db/user.d
         install -d $pkgdir/etc/dconf/profile
-        cp $srcdir/$pkgbase/$1/dconf/profile/user $pkgdir/etc/dconf/profile/
+        install $srcdir/$pkgbase/$1/dconf/profile/user $pkgdir/etc/dconf/profile
     fi
 }
 
 package_manjaro-openbox-minimal-skel() {
-    pkgdesc='Manjaro Linux Openbox Minimal Skel'
+    pkgdesc='Manjaro Linux Openbox Minimal Settings'
     conflicts=('manjaro-openbox-skel' 'manjaro-openbox-skel-dev')
     provides=('manjaro-openbox-skel')
 
@@ -49,7 +50,7 @@ package_manjaro-openbox-minimal-skel() {
 }
 
 package_manjaro-openbox-extra-skel() {
-    pkgdesc='Manjaro Linux Openbox Extra Skel'
+    pkgdesc='Manjaro Linux Openbox Extra Settings'
     conflicts=('manjaro-openbox-skel' 'manjaro-openbox-skel-dev')
     provides=('manjaro-openbox-skel')
 
