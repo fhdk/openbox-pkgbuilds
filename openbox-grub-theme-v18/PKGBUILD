@@ -1,10 +1,10 @@
 # Maintainer: fhdk <fh at manjaro org>
 
-pkgname=manjaro-illyria-openbox-grub-theme
+pkgname=manjaro-openbox-grub-theme-18.0
 _gitname=openbox-grub-theme
 _branch=v18
 pkgver=1.0
-pkgrel=1
+pkgrel=3
 pkgdesc="Slick grub theme for Manjaro Openbox"
 arch=('any')
 license=('MIT')

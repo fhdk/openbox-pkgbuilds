@@ -3,7 +3,7 @@
 pkgbase=guake-config
 pkgname=('manjaro-guake-config')
 pkgver=1.1
-pkgrel=1
+pkgrel=2
 arch=('any')
 license=('MIT')
 source=("00-manjaro-guake-config" "guake-config.install" "user")
@@ -15,7 +15,7 @@ install=guake-config.install
 
 package(){
     install -d "$pkgdir/etc/dconf/profile"
-    cp "user" "$pkgdir/etc/dconf/profile/user"
+    install "user" "$pkgdir/etc/dconf/profile/user"
     install -d "$pkgdir/etc/dconf/db/user.d"
-    cp "00-manjaro-guake-config" "$pkgdir/etc/dconf/db/user.d"
+    install "00-manjaro-guake-config" "$pkgdir/etc/dconf/db/user.d"
 }
