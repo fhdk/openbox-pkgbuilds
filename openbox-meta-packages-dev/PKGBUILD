@@ -2,7 +2,7 @@
 
 pkgbase=openbox-meta-packages-dev
 pkgname=('manjaro-openbox-core-dev' 'manjaro-openbox-extra-dev' 'manjaro-openbox-minimal-dev')
-pkgver=1.3.3
+pkgver=1.3.3.1
 pkgrel=1
 arch=('any')
 license=('MIT')
@@ -18,8 +18,6 @@ package_manjaro-openbox-core-dev() {
         'manjaro-guake-config' 'manjaro-zsh-config' 'manjaro-openbox-settings'
         'manjaro-openbox-common' 'manjaro-openbox-grub-theme' 'manjaro-openbox-scripts'
         'manjaro-openbox-theming-fonts' 'manjaro-openbox-theming-icons' 'manjaro-openbox-theming-theme'
-    )
-    depends=(
         'arandr'
         'compton' 'conky'
         'dunst'
@@ -52,8 +50,6 @@ package_manjaro-openbox-minimal-dev() {
         'manjaro-guake-config' 'manjaro-zsh-config' 'manjaro-openbox-settings'
         'manjaro-openbox-common' 'manjaro-openbox-grub-theme' 'manjaro-openbox-scripts'
         'manjaro-openbox-theming-fonts' 'manjaro-openbox-theming-icons' 'manjaro-openbox-theming-theme'
-    )
-    depends=(
         'basilisk-bin'
         'sylpheed'
         'galculator' 'gpicview-gtk3' 'gsimplecal' 'gvfs' 'gvfs-afc' 'gvfs-mtp'
@@ -81,8 +77,6 @@ package_manjaro-openbox-extra-dev() {
         'manjaro-guake-config' 'manjaro-zsh-config' 'manjaro-openbox-settings'
         'manjaro-openbox-common' 'manjaro-openbox-grub-theme' 'manjaro-openbox-scripts'
         'manjaro-openbox-theming-fonts' 'manjaro-openbox-theming-icons' 'manjaro-openbox-theming-theme'
-    )
-    depends=(
         'android-tools' 'android-udev' 'audacious-gtk3' 'audacious-plugins-gtk3' 'avahi'
         'basilisk-bin' 'blueman'
         'catfish' 'sylpheed'
@@ -106,5 +100,5 @@ package_manjaro-openbox-extra-dev() {
         'udiskie' 'udisks2' 'ufw' 'unarchiver' 'usb_modeswitch'
         'vlc-nightly' 'volumeicon'
         'xfburn' 'xfce4-settings-gtk3'
-        )
+    )
 }
