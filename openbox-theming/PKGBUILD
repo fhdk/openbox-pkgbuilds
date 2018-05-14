@@ -31,7 +31,7 @@ package_manjaro-openbox-theme-17.0() {
     provides=('manjaro-openbox-theme-17.0')
 }
 
-package_manjaro-openbox-18.0-theme() {
+package_manjaro-openbox-theme-18.0() {
     pkgdesc='Manjaro Openbox Theme 18.0'
     depends=(
         'adapta-maia-theme'

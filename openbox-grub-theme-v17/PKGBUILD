@@ -10,6 +10,8 @@ arch=('any')
 license=('MIT')
 makedepends=('git')
 source=('git+https://github.com/fhdk/openbox-grub-theme.git#branch=${_branch}')
+provides=('manjaro-openbox-grub-theme')
+conflicts=('manjaro-openbox-grub-theme')
 install=openbox-grub-theme.install
 sha256sums=('SKIP')
 
