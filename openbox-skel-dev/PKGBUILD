@@ -4,7 +4,7 @@ pkgbase=openbox-skel
 pkgname=('manjaro-openbox-minimal-skel-dev'
          'manjaro-openbox-extra-skel-dev'
          )
-pkgver=1.3.7
+pkgver=1.3.11
 pkgrel=1
 _branch=master
 arch=('any')
