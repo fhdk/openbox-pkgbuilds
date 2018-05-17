@@ -46,6 +46,7 @@ msg2() {
 }
 
 post_install() {
+    sed -i '/^background=/c\background=/usr/share/backgrounds/manjaro-dog.jpg' /etc/lightdm/slick-greeter.conf
     dconf update
     msg '***************'
     msg 'To make use of these Openbox settings copy the content of'
@@ -61,4 +62,8 @@ post_upgrade() {
     msg '  `/etc/skel/*` including hidden files and folders to your home folder'
     msg '  `$ cp -r /etc/skel/* /home/$USER`'
     msg '***************'
+}
+
+post_remove(){
+    sed -i '/^background=/c\background=/usr/share/slick-greeter/slick-greeter.png' /etc/lightdm/slick-greeter.conf
 }
