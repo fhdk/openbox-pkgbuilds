@@ -56,6 +56,7 @@ post_install() {
 }
 
 post_upgrade() {
+    sed -i '/^background=/c\background=/usr/share/backgrounds/manjaro-dog.jpg' /etc/lightdm/slick-greeter.conf
     dconf update
     msg '***************'
     msg 'To make use of these Openbox settings copy the content of'
