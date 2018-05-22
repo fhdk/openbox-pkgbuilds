@@ -5,7 +5,7 @@ pkgname=(
     'manjaro-openbox-minimal-skel'
     'manjaro-openbox-extra-skel'
     )
-pkgver=1.18.11
+pkgver=1.18.13
 pkgrel=1
 _branch=stable
 arch=('any')
@@ -15,7 +15,6 @@ makedepends=('git')
 source=("git+$url.git#branch=${_branch}")
 sha256sums=('SKIP')
 install=openbox-skel.install
-backup=('etc/dconf/profile/user' 'etc/dconf/db/user.d/00-gedit-settings')
 
 _inst_dir(){
     if [[ -d $srcdir/$pkgbase/$1/skel ]]; then
