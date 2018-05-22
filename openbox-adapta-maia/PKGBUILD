@@ -1,9 +1,9 @@
 # Maintainer: fhdk <fh at manjaro org>
-pkgname='manjaro-openbox-adapta-maia-themes'
+pkgname='manjaro-openbox-adapta-maia'
 _gitname='openbox-adapta-maia'
 pkgver=1.0
 pkgrel=1
-pkgdesc='Openbox Window Themes matching Adapta Maia theme'
+pkgdesc='Openbox Window Themes matching Adapta (Nokto) Maia theme'
 arch=('any')
 url="https://github.com/fhdk/${_gitname}"
 license=('MIT')
@@ -11,8 +11,7 @@ makedepends=('git')
 source=("git+$url.git")
 md5sums=('SKIP')
 
-package() {    
-    echo "----------------------  $srcdir/$_gitname"
+package() {
 	install -d -m644 "${pkgdir}/usr/share/themes"
 	cd $srcdir/$_gitname
 	cp -R themes/* ${pkgdir}/usr/share/themes
