@@ -44,7 +44,7 @@ post_install() {
     msg '***************'
     msg 'To make use of these Openbox settings copy the content of'
     msg '  `/etc/skel/*`  including hidden files and folders to your home folder'
-    msg '  `$ cp -r /etc/skel/* /home/$USER`'
+    msg '  `$ cp -R /etc/skel/* /home/$USER`'
     msg '***************'
 }
 
@@ -53,7 +53,7 @@ post_upgrade() {
     msg '***************'
     msg 'To make use of these Openbox settings copy the content of'
     msg '  `/etc/skel/*` including hidden files and folders to your home folder'
-    msg '  `$ cp -r /etc/skel/* /home/$USER`'
+    msg '  `$ cp -R /etc/skel/* /home/$USER`'
     msg '***************'
 }
 
