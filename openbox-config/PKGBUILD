@@ -1,0 +1,44 @@
+# Maintainer: fhdk <fh at manjaro org>
+
+pkgbase=openbox-config
+pkgname=('manjaro-openbox-config')
+pkgver=1.18
+pkgrel=1
+_branch=master
+arch=('any')
+url="https://github.com/fhdk/${pkgbase}"
+license=('MIT')
+makedepends=('git')
+source=("git+$url.git#branch=${_branch}")
+sha256sums=('SKIP')
+install=openbox-config.install
+
+_inst_dir(){
+    if [[ -d $srcdir/$pkgbase/$1/skel ]]; then
+        install -d $pkgdir/etc
+        cp -r $srcdir/$pkgbase/$1/skel $pkgdir/etc
+    fi
+
+    if [[ -d $srcdir/$pkgbase/$1/scripts ]]; then
+        install -d $pkgdir/usr/bin
+        cp $srcdir/$pkgbase/$1/scripts/* $pkgdir/usr/bin
+    fi
+
+    if [[ -d $srcdir/$pkgbase/$1/schemas ]]; then
+        install -d $pkgdir/usr/share/glib-2.0/schemas
+        cp $srcdir/$pkgbase/$1/schemas/* $pkgdir/usr/share/glib-2.0/schemas
+    fi
+}
+
+package_manjaro-openbox-config() {
+    pkgdesc='Manjaro Linux Openbox Config'
+    conflicts=(
+        'manjaro-openbox-skel'
+        'manjaro-openbox-skel-dev'
+        'manjaro-openbox-extra-skel'
+        'manjaro-openbox-minimal-skel'
+        )
+    provides=('manjaro-openbox-config')
+
+    _inst_dir 'config'
+}

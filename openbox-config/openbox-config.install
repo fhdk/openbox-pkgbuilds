@@ -22,12 +22,6 @@ enable_colors(){
     readonly ALL_OFF BOLD BLUE GREEN RED YELLOW
 }
 
-if [[ -t 2 ]]; then
-    enable_colors
-else
-    disable_colors
-fi
-
 enable_colors
 
 plain() {
@@ -46,8 +40,7 @@ msg2() {
 }
 
 post_install() {
-    sed -i '/^background=/c\background=/usr/share/backgrounds/manjaro-dog.jpg' /etc/lightdm/slick-greeter.conf
-    dconf update
+    sed -i '/^background=/c\background=/usr/share/backgrounds/openbox/block-font-logo3.jpg' /etc/lightdm/slick-greeter.conf
     msg '***************'
     msg 'To make use of these Openbox settings copy the content of'
     msg '  `/etc/skel/*`  including hidden files and folders to your home folder'
@@ -56,7 +49,7 @@ post_install() {
 }
 
 post_upgrade() {
-    dconf update
+    sed -i '/^background=/c\background=/usr/share/backgrounds/openbox/block-font-logo3.jpg' /etc/lightdm/slick-greeter.conf
     msg '***************'
     msg 'To make use of these Openbox settings copy the content of'
     msg '  `/etc/skel/*` including hidden files and folders to your home folder'
@@ -64,6 +57,6 @@ post_upgrade() {
     msg '***************'
 }
 
-post_remove(){
+post_remove(){    
     sed -i '/^background=/c\background=/usr/share/slick-greeter/slick-greeter.png' /etc/lightdm/slick-greeter.conf
 }
