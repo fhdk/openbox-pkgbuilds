@@ -13,18 +13,18 @@ source=("git+$url.git#branch=${_branch}")
 sha256sums=('SKIP')
 install=openbox-config.install
 
-_inst_dir(){
-    if [[ -d $srcdir/$pkgbase/$1/skel ]]; then
+_install(){
+    if [[ -d $srcdir/$pkgbase/skel ]]; then
         install -d $pkgdir/etc
-        cp -r $srcdir/$pkgbase/$1/skel $pkgdir/etc
+        cp -r $srcdir/$pkgbase/skel $pkgdir/etc
     fi
 
-    if [[ -d $srcdir/$pkgbase/$1/scripts ]]; then
+    if [[ -d $srcdir/$pkgbase/scripts ]]; then
         install -d $pkgdir/usr/bin
         cp $srcdir/$pkgbase/$1/scripts/* $pkgdir/usr/bin
     fi
 
-    if [[ -d $srcdir/$pkgbase/$1/schemas ]]; then
+    if [[ -d $srcdir/$pkgbase/schemas ]]; then
         install -d $pkgdir/usr/share/glib-2.0/schemas
         cp $srcdir/$pkgbase/$1/schemas/* $pkgdir/usr/share/glib-2.0/schemas
     fi
@@ -40,5 +40,5 @@ package_manjaro-openbox-config() {
         )
     provides=('manjaro-openbox-config')
 
-    _inst_dir 'config'
+    _install
 }
