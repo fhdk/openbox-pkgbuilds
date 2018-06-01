@@ -11,8 +11,7 @@ license=('GPL3')
 depends=('polkit' 'libgee06' 'gtk2' 'startup-notification' 'dbus-glib' 'xorg-xauth')
 makedepends=('git' 'gtk-doc' 'vala' 'intltool')
 provides=('gksu-polkit' 'gksu')
-conflicts=('gksu-polkit-git' 'gksu')
-install='gksu-polkit.install'
+conflicts=('gksu-polkit-git' 'gksu' 'zensu')
 source=("git+https://github.com/fhdk/gksu-polkit.git"
         "gksu-polkit-0.0.3-policy.patch"
         "gksu-polkit-dbus.patch"
@@ -45,6 +44,7 @@ package() {
   make DESTDIR="$pkgdir" install
   install -Dm644 "$srcdir/gksu-polkit.service" \
     "$pkgdir/$(pkg-config systemd --variable=systemdsystemunitdir )/gksu.service"
+  ln -s gksu-polkit $pkgdir/usr/bin/gksu
 }
 
 # vim:set ts=2 sw=2 et:

@@ -2,7 +2,7 @@
 pkgname='manjaro-openbox-adapta-maia'
 _gitname='openbox-adapta-maia'
 pkgver=1.0
-pkgrel=1
+pkgrel=3
 pkgdesc='Openbox Window Themes matching Adapta (Nokto) Maia theme'
 arch=('any')
 url="https://github.com/fhdk/${_gitname}"
