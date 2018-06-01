@@ -1,9 +1,9 @@
 # Maintainer: fhdk <fh at manjaro org>
 pkgname='manjaro-openbox-wallpapers-18.0'
 _gitname='openbox-wallpapers'
-_branch="18.0"
+_branch='master'
 pkgver=1.0
-pkgrel=4
+pkgrel=5
 pkgdesc='Manjaro Openbox Wallpapers 18.0'
 arch=('any')
 url="https://github.com/fhdk/${_gitname}"
