@@ -1,9 +1,9 @@
-# Maintainer: Brian Bidulock <bidulock@openss7.org>
+# Maintainer: fhdk <fhatmanjarodotorg>
+# Contributor: Brian Bidulock <bidulock@openss7.org>
 
 pkgname=gksu-polkit
-pkgver=0.0.2.r3.gd7e3160
+pkgver=0.0.3
 pkgrel=1
-epoch=2
 pkgdesc="Replacement for gksu that uses PolicyKit"
 arch=('x86_64' 'i686')
 url="https://live.gnome.org/gksu"
@@ -21,11 +21,6 @@ sha256sums=('SKIP'
             '334e26dce80e0dead984b04122d22ee13e4c5ff5d370098c7e46503855fad250'
             'a0efd0d989abb31c765f4eedda6e1ff99f99cfff1ef52bc11adb983505836f0d'
             '41ff7af4bfbb56893393f25135966b54c1bf7683fc38a2a0f0129fb23712b27b')
-
-pkgver() {
-  cd $pkgname
-  git describe --long --tags | sed -r 's/([^-]*-g)/r\1/;s/-/./g'
-}
 
 prepare() {
   cd $pkgname
