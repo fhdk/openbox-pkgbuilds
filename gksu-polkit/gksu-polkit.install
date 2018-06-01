@@ -1,0 +1,7 @@
+post_install() {
+    ln -s /usr/bin/gsku-polkit /usr/bin/gksu
+}
+
+post_remove() {
+    rm -f /usr/bin/gksu
+}
