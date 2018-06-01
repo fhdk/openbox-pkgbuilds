@@ -41,15 +41,14 @@ msg2() {
 
 post_install() {
     sed -i '/^background=/c\background=/usr/share/backgrounds/openbox/block-font-logo3.jpg' /etc/lightdm/slick-greeter.conf
-    msg '***************'
+    msg '***********************************************************************'
     msg 'To make use of these Openbox settings copy the content of'
     msg '  `/etc/skel/*`  including hidden files and folders to your home folder'
     msg '  `$ cp -R /etc/skel/* /home/$USER`'
-    msg '***************'
+    msg '***********************************************************************'
 }
 
 post_upgrade() {
-    sed -i '/^background=/c\background=/usr/share/backgrounds/openbox/block-font-logo3.jpg' /etc/lightdm/slick-greeter.conf
     msg '***************'
     msg 'To make use of these Openbox settings copy the content of'
     msg '  `/etc/skel/*` including hidden files and folders to your home folder'
