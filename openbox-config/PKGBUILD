@@ -3,7 +3,7 @@
 pkgbase=openbox-config
 pkgname=('manjaro-openbox-config')
 pkgver=1.18
-pkgrel=1
+pkgrel=7
 _branch=master
 arch=('any')
 url="https://github.com/fhdk/${pkgbase}"
