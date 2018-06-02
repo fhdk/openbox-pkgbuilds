@@ -17,7 +17,7 @@ sha256sums=('SKIP')
 
 package() {
     cd $srcdir/$_gitname
-    install -d $pkgdir/boot/grub/themes/openbox
-    install -m644 theme/* $pkgdir/boot/grub/themes/openbox/
+    install -d -m755 $pkgdir/boot/grub/themes/openbox
+    install -m755 theme/* $pkgdir/boot/grub/themes/openbox/
 }
 

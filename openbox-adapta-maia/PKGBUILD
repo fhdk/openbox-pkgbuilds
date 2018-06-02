@@ -2,7 +2,7 @@
 pkgname='manjaro-openbox-adapta-maia'
 _gitname='openbox-adapta-maia'
 pkgver=1.0
-pkgrel=3
+pkgrel=4
 pkgdesc='Openbox Window Themes matching Adapta (Nokto) Maia theme'
 arch=('any')
 url="https://github.com/fhdk/${_gitname}"
@@ -12,7 +12,7 @@ source=("git+$url.git")
 md5sums=('SKIP')
 
 package() {
-	install -d -m644 "${pkgdir}/usr/share/themes"
+	install -d -m755 "${pkgdir}/usr/share/themes"
 	cd $srcdir/$_gitname
 	cp -R themes/* ${pkgdir}/usr/share/themes
 }
