@@ -2,7 +2,7 @@
 
 pkgname=manjaro-openbox-grub-theme-blue
 _gitname=openbox-grub-theme
-_branch=v18-blue
+_branch='v18-blue'
 pkgver=1.0
 pkgrel=1
 pkgdesc="Slick grub theme for Manjaro Openbox"
