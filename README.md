@@ -1,1 +1,3 @@
-# obx-pkgbuilds
+# openbox-pkgbuilds
+
+moved to gitlab.manjaro.org
